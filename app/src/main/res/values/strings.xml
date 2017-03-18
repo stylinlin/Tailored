@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Tailored</string>
+    <string name="home_page">首页</string>
+    <string name="crash">崩溃</string>
+    <string name="get">拉取补丁</string>
+    <string name="clean">清除补丁</string>
+    <string name="my_view">自制控件</string>
+    <string name="bot_bad">不错不错！</string>
+    <string name="test_page">测试页面！</string>
+    <string name="app_compat">AppCompat</string>
+    <string name="app_compat_textview">textview</string>
+</resources>

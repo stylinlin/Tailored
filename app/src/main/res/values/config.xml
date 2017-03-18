@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <integer name="int100">100</integer>
+    <integer name="int1500">500</integer>
+    <integer name="int1000" >1000</integer>
+    <integer name="int2000" >2000</integer>
+    <integer name="int3000" >3000</integer>
+    <integer name="int5000" >5000</integer>
+</resources>
