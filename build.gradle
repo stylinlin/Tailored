@@ -20,7 +20,7 @@ allprojects {
             url "http://repo.baichuan-android.taobao.com/content/groups/BaichuanRepositories"
         }
         // RxJava and RxAndroid仓库
-        maven { url "https://jitpack.io" }
+//        maven { url "https://jitpack.io" }
         mavenCentral()
 
         jcenter()

@@ -15,25 +15,17 @@ import com.taobao.hotfix.HotFixManager;
 import com.taobao.hotfix.PatchLoadStatusListener;
 import com.taobao.hotfix.util.PatchStatusCode;
 
-import java.util.concurrent.TimeUnit;
-
-import butterknife.Bind;
-import butterknife.ButterKnife;
-import rx.Observable;
-import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-
 import static com.stylelin.tailored.Utils.Config.REQUEST_EXTERNAL_STORAGE_PERMISSION;
 
 /**
  * 引导页
  */
 public class GuideActivity extends Activity {
-    private Subscription subscription;
+//    private Subscription subscription;
+//    private Subscription subscription;
 
-    @Bind(R.id.tv_show)
-    TextView tv_show;
+//    @Bind(R.id.tv_show)
+//    TextView tv_show;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +33,7 @@ public class GuideActivity extends Activity {
         setContentView(R.layout.activity_guide);
 
 
-        ButterKnife.bind(this);
+//        ButterKnife.bind(this);
         init();
         initHotfix();
     }
@@ -65,7 +57,8 @@ public class GuideActivity extends Activity {
                             public void run() {
                                 StringBuilder stringBuilder = new StringBuilder();
                                 stringBuilder.append("Mode:").append(mode).append(" Code:").append(code).append(" Info:").append(info).append(" HandlePatchVersion:").append(handlePatchVersion);
-                                tv_show.setText(stringBuilder.toString());
+                                ((TextView)findViewById(R.id.tv_show)).setText(stringBuilder.toString());
+//                                tv_show.setText(stringBuilder.toString());
                             }
                         });
 
@@ -100,16 +93,16 @@ public class GuideActivity extends Activity {
      * 倒计时进入首页
      */
     private void goHomeActivity() {
-        subscription = Observable.timer(getResources().getInteger(R.integer.int5000), TimeUnit.MILLISECONDS)
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Action1<Long>() {
-                    @Override
-                    public void call(Long aLong) {
+//        subscription = Observable.timer(getResources().getInteger(R.integer.int3000), TimeUnit.MILLISECONDS)
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribe(new Action1<Long>() {
+//                    @Override
+//                    public void call(Long aLong) {
                         Intent intent = new Intent(GuideActivity.this, HomeActivity.class);
                         startActivity(intent);
                         finish();
-                    }
-                });
+//                    }
+//                });
     }
 
     /**

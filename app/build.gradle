@@ -30,8 +30,5 @@ dependencies {
     // 阿里热修复sdk
     compile 'com.taobao.android:alisdk-hotfix:1.4.0'
     //RxJava and RxAndroid
-    compile 'io.reactivex:rxandroid:1.1.0'
-    compile 'io.reactivex:rxjava:1.1.0'
     //黄油刀 注解
-    compile 'com.jakewharton:butterknife:7.0.1'
 }
